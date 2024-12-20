@@ -6,7 +6,7 @@ import (
 	"github.com/Fantom-foundation/lachesis-base/common/bigendian"
 	"github.com/Fantom-foundation/lachesis-base/kvdb"
 
-	"github.com/Fantom-foundation/go-opera/utils/ioread"
+	"github.com/WlinkNET/xpense_chain/utils/ioread"
 )
 
 func Write(writer io.Writer, it kvdb.Iterator) error {

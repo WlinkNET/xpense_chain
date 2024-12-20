@@ -8,7 +8,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/Fantom-foundation/go-opera/utils/signers/gsignercache"
+	"github.com/WlinkNET/xpense_chain/utils/signers/gsignercache"
 
 	"github.com/Fantom-foundation/lachesis-base/hash"
 	"github.com/Fantom-foundation/lachesis-base/inter/dag"
@@ -21,14 +21,14 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/metrics"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
-	"github.com/Fantom-foundation/go-opera/gossip/blockproc/verwatcher"
-	"github.com/Fantom-foundation/go-opera/gossip/emitter"
-	"github.com/Fantom-foundation/go-opera/gossip/evmstore"
-	"github.com/Fantom-foundation/go-opera/inter"
-	"github.com/Fantom-foundation/go-opera/inter/iblockproc"
-	"github.com/Fantom-foundation/go-opera/opera"
-	"github.com/Fantom-foundation/go-opera/utils"
+	"github.com/WlinkNET/xpense_chain/evmcore"
+	"github.com/WlinkNET/xpense_chain/gossip/blockproc/verwatcher"
+	"github.com/WlinkNET/xpense_chain/gossip/emitter"
+	"github.com/WlinkNET/xpense_chain/gossip/evmstore"
+	"github.com/WlinkNET/xpense_chain/inter"
+	"github.com/WlinkNET/xpense_chain/inter/iblockproc"
+	"github.com/WlinkNET/xpense_chain/opera"
+	"github.com/WlinkNET/xpense_chain/utils"
 )
 
 var (

@@ -4,10 +4,10 @@ import (
 	"math/rand/v2"
 	"time"
 
-	"github.com/Fantom-foundation/go-opera/version"
+	"github.com/WlinkNET/xpense_chain/version"
 
-	"github.com/Fantom-foundation/go-opera/inter/validatorpk"
-	"github.com/Fantom-foundation/go-opera/opera"
+	"github.com/WlinkNET/xpense_chain/inter/validatorpk"
+	"github.com/WlinkNET/xpense_chain/opera"
 	"github.com/Fantom-foundation/lachesis-base/inter/idx"
 )
 

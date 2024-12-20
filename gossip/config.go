@@ -13,12 +13,12 @@ import (
 	"github.com/Fantom-foundation/lachesis-base/utils/cachescale"
 	"github.com/syndtr/goleveldb/leveldb/opt"
 
-	"github.com/Fantom-foundation/go-opera/eventcheck/heavycheck"
-	"github.com/Fantom-foundation/go-opera/gossip/evmstore"
-	"github.com/Fantom-foundation/go-opera/gossip/filters"
-	"github.com/Fantom-foundation/go-opera/gossip/gasprice"
-	"github.com/Fantom-foundation/go-opera/gossip/protocols/dag/dagstream/dagstreamleecher"
-	"github.com/Fantom-foundation/go-opera/gossip/protocols/dag/dagstream/dagstreamseeder"
+	"github.com/WlinkNET/xpense_chain/eventcheck/heavycheck"
+	"github.com/WlinkNET/xpense_chain/gossip/evmstore"
+	"github.com/WlinkNET/xpense_chain/gossip/filters"
+	"github.com/WlinkNET/xpense_chain/gossip/gasprice"
+	"github.com/WlinkNET/xpense_chain/gossip/protocols/dag/dagstream/dagstreamleecher"
+	"github.com/WlinkNET/xpense_chain/gossip/protocols/dag/dagstream/dagstreamseeder"
 )
 
 const nominalSize uint = 1

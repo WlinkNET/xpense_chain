@@ -35,17 +35,17 @@ import (
 	"github.com/holiman/uint256"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Fantom-foundation/go-opera/gossip/contract/driver100"
-	"github.com/Fantom-foundation/go-opera/gossip/contract/driverauth100"
-	"github.com/Fantom-foundation/go-opera/gossip/contract/netinit100"
-	"github.com/Fantom-foundation/go-opera/gossip/contract/sfc100"
-	"github.com/Fantom-foundation/go-opera/logger"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/driver"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/driverauth"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/evmwriter"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/netinit"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/sfc"
-	"github.com/Fantom-foundation/go-opera/utils"
+	"github.com/WlinkNET/xpense_chain/gossip/contract/driver100"
+	"github.com/WlinkNET/xpense_chain/gossip/contract/driverauth100"
+	"github.com/WlinkNET/xpense_chain/gossip/contract/netinit100"
+	"github.com/WlinkNET/xpense_chain/gossip/contract/sfc100"
+	"github.com/WlinkNET/xpense_chain/logger"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/driver"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/driverauth"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/evmwriter"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/netinit"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/sfc"
+	"github.com/WlinkNET/xpense_chain/utils"
 )
 
 func TestSFC(t *testing.T) {

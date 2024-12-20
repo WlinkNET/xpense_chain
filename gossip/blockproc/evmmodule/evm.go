@@ -8,13 +8,13 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/params"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
-	"github.com/Fantom-foundation/go-opera/gossip/blockproc"
-	"github.com/Fantom-foundation/go-opera/gossip/gasprice"
-	"github.com/Fantom-foundation/go-opera/inter/iblockproc"
-	"github.com/Fantom-foundation/go-opera/inter/state"
-	"github.com/Fantom-foundation/go-opera/opera"
-	"github.com/Fantom-foundation/go-opera/utils"
+	"github.com/WlinkNET/xpense_chain/evmcore"
+	"github.com/WlinkNET/xpense_chain/gossip/blockproc"
+	"github.com/WlinkNET/xpense_chain/gossip/gasprice"
+	"github.com/WlinkNET/xpense_chain/inter/iblockproc"
+	"github.com/WlinkNET/xpense_chain/inter/state"
+	"github.com/WlinkNET/xpense_chain/opera"
+	"github.com/WlinkNET/xpense_chain/utils"
 )
 
 type EVMModule struct{}

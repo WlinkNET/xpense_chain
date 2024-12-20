@@ -21,7 +21,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/Fantom-foundation/go-opera/inter"
+	"github.com/WlinkNET/xpense_chain/inter"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 )

@@ -33,10 +33,10 @@ import (
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
-	"github.com/Fantom-foundation/go-opera/inter"
-	"github.com/Fantom-foundation/go-opera/inter/iblockproc"
-	"github.com/Fantom-foundation/go-opera/inter/state"
+	"github.com/WlinkNET/xpense_chain/evmcore"
+	"github.com/WlinkNET/xpense_chain/inter"
+	"github.com/WlinkNET/xpense_chain/inter/iblockproc"
+	"github.com/WlinkNET/xpense_chain/inter/state"
 )
 
 // PeerProgress is synchronization status of a peer

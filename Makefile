@@ -1,32 +1,32 @@
 .PHONY: all
-all: sonicd sonictool
+all: xpensed xpensetool
 
 GOPROXY ?= "https://proxy.golang.org,direct"
-.PHONY: sonicd sonictool
-sonicd:
+.PHONY: xpensed xpensetool
+xpensed:
 	GIT_COMMIT=`git rev-list -1 HEAD 2>/dev/null || echo ""` && \
 	GIT_DATE=`git log -1 --date=short --pretty=format:%ct 2>/dev/null || echo ""` && \
 	GOPROXY=$(GOPROXY) \
 	go build \
-	    -ldflags "-s -w -X github.com/Fantom-foundation/go-opera/config.GitCommit=$${GIT_COMMIT} -X github.com/Fantom-foundation/go-opera/config.GitDate=$${GIT_DATE}" \
-	    -o build/sonicd \
-	    ./cmd/sonicd
+	    -ldflags "-s -w -X github.com/WlinkNET/xpense_chain/config.GitCommit=$${GIT_COMMIT} -X github.com/WlinkNET/xpense_chain/config.GitDate=$${GIT_DATE}" \
+	    -o build/xpensed \
+	    ./cmd/xpensed
 
-sonictool:
+xpensetool:
 	GIT_COMMIT=`git rev-list -1 HEAD 2>/dev/null || echo ""` && \
 	GIT_DATE=`git log -1 --date=short --pretty=format:%ct 2>/dev/null || echo ""` && \
 	GOPROXY=$(GOPROXY) \
 	go build \
-	    -ldflags "-s -w -X github.com/Fantom-foundation/go-opera/config.GitCommit=$${GIT_COMMIT} -X github.com/Fantom-foundation/go-opera/config.GitDate=$${GIT_DATE}" \
-	    -o build/sonictool \
-	    ./cmd/sonictool
+	    -ldflags "-s -w -X github.com/WlinkNET/xpense_chain/config.GitCommit=$${GIT_COMMIT} -X github.com/WlinkNET/xpense_chain/config.GitDate=$${GIT_DATE}" \
+	    -o build/xpensetool \
+	    ./cmd/xpensetool
 
 TAG ?= "latest"
-.PHONY: sonic-image
-sonic-image:
+.PHONY: xpense-image
+xpense-image:
 	docker build \
     	    --network=host \
-    	    -f ./docker/Dockerfile.opera -t "sonic:$(TAG)" .
+    	    -f ./docker/Dockerfile.opera -t "xpense:$(TAG)" .
 
 .PHONY: test
 test:

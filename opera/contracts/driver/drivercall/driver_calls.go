@@ -9,10 +9,10 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/Fantom-foundation/go-opera/inter"
-	"github.com/Fantom-foundation/go-opera/opera"
-	"github.com/Fantom-foundation/go-opera/opera/genesis/gpos"
-	"github.com/Fantom-foundation/go-opera/utils"
+	"github.com/WlinkNET/xpense_chain/inter"
+	"github.com/WlinkNET/xpense_chain/opera"
+	"github.com/WlinkNET/xpense_chain/opera/genesis/gpos"
+	"github.com/WlinkNET/xpense_chain/utils"
 )
 
 //go:embed NodeDriverAbi.json

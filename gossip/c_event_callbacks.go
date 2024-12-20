@@ -13,12 +13,12 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/log"
 
-	"github.com/Fantom-foundation/go-opera/eventcheck"
-	"github.com/Fantom-foundation/go-opera/eventcheck/epochcheck"
-	"github.com/Fantom-foundation/go-opera/gossip/emitter"
-	"github.com/Fantom-foundation/go-opera/inter"
-	"github.com/Fantom-foundation/go-opera/inter/iblockproc"
-	"github.com/Fantom-foundation/go-opera/utils/concurrent"
+	"github.com/WlinkNET/xpense_chain/eventcheck"
+	"github.com/WlinkNET/xpense_chain/eventcheck/epochcheck"
+	"github.com/WlinkNET/xpense_chain/gossip/emitter"
+	"github.com/WlinkNET/xpense_chain/inter"
+	"github.com/WlinkNET/xpense_chain/inter/iblockproc"
+	"github.com/WlinkNET/xpense_chain/utils/concurrent"
 )
 
 var (

@@ -14,18 +14,18 @@ import (
 	"syscall"
 	"time"
 
-	sonicd "github.com/Fantom-foundation/go-opera/cmd/sonicd/app"
-	sonictool "github.com/Fantom-foundation/go-opera/cmd/sonictool/app"
-	"github.com/Fantom-foundation/go-opera/evmcore"
-	"github.com/Fantom-foundation/go-opera/integration/makefakegenesis"
-	"github.com/Fantom-foundation/go-opera/opera"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/driver"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/driver/drivercall"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/driverauth"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/evmwriter"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/netinit"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/sfc"
-	futils "github.com/Fantom-foundation/go-opera/utils"
+	xpensed "github.com/WlinkNET/xpense_chain/cmd/xpensed/app"
+	xpensetool "github.com/WlinkNET/xpense_chain/cmd/xpensetool/app"
+	"github.com/WlinkNET/xpense_chain/evmcore"
+	"github.com/WlinkNET/xpense_chain/integration/makefakegenesis"
+	"github.com/WlinkNET/xpense_chain/opera"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/driver"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/driver/drivercall"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/driverauth"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/evmwriter"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/netinit"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/sfc"
+	futils "github.com/WlinkNET/xpense_chain/utils"
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
@@ -34,7 +34,7 @@ import (
 )
 
 // IntegrationTestNet is a in-process test network for integration tests. When
-// started, it runs a full Sonic node maintaining a chain within the process
+// started, it runs a full Xpense node maintaining a chain within the process
 // containing this object. The network can be used to run transactions on and
 // to perform queries against.
 //
@@ -186,22 +186,22 @@ func StartIntegrationTestNetFromJsonGenesis(directory string) (*IntegrationTestN
 }
 
 func startIntegrationTestNet(directory string, args []string) (*IntegrationTestNet, error) {
-	// start the fakenet sonic node
+	// start the fakenet xpense node
 	result := &IntegrationTestNet{
 		directory: directory,
 		validator: Account{evmcore.FakeKey(1)},
 	}
 
 	// initialize the data directory for the single node on the test network
-	// equivalent to running `sonictool --datadir <dataDir> genesis fake 1`
+	// equivalent to running `xpensetool --datadir <dataDir> genesis fake 1`
 	originalArgs := os.Args
 	os.Args = append([]string{
-		"sonictool",
+		"xpensetool",
 		"--datadir", result.stateDir(),
 		"--statedb.livecache", "1",
 		"--statedb.archivecache", "1",
 	}, args...)
-	if err := sonictool.Run(); err != nil {
+	if err := xpensetool.Run(); err != nil {
 		os.Args = originalArgs
 		return nil, fmt.Errorf("failed to initialize the test network: %w", err)
 	}
@@ -245,10 +245,10 @@ func (n *IntegrationTestNet) start() error {
 		originalArgs := os.Args
 		defer func() { os.Args = originalArgs }()
 
-		// start the fakenet sonic node
-		// equivalent to running `sonicd ...` but in this local process
+		// start the fakenet xpense node
+		// equivalent to running `xpensed ...` but in this local process
 		os.Args = []string{
-			"sonicd",
+			"xpensed",
 
 			// data storage options
 			"--datadir", n.stateDir(),
@@ -275,7 +275,7 @@ func (n *IntegrationTestNet) start() error {
 			"--statedb.archivecache", "1",
 		}
 
-		err := sonicd.Run()
+		err := xpensed.Run()
 		if err != nil {
 			panic(fmt.Sprint("Failed to start the fake network:", err))
 		}
@@ -485,11 +485,11 @@ func (n *IntegrationTestNet) RestartWithExportImport() error {
 	// export
 	genesisFile := filepath.Join(n.directory, "testGenesis.g")
 	os.Args = []string{
-		"sonictool",
+		"xpensetool",
 		"--datadir", n.stateDir(),
 		"genesis", "export", genesisFile,
 	}
-	err := sonictool.Run()
+	err := xpensetool.Run()
 	if err != nil {
 		return err
 	}
@@ -504,11 +504,11 @@ func (n *IntegrationTestNet) RestartWithExportImport() error {
 
 	// import genesis file
 	os.Args = []string{
-		"sonictool",
+		"xpensetool",
 		"--datadir", n.stateDir(),
 		"genesis", "--experimental", genesisFile,
 	}
-	err = sonictool.Run()
+	err = xpensetool.Run()
 	if err != nil {
 		return err
 	}

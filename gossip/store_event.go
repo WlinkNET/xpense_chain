@@ -12,7 +12,7 @@ import (
 	"github.com/ethereum/go-ethereum/ethdb"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"github.com/Fantom-foundation/go-opera/inter"
+	"github.com/WlinkNET/xpense_chain/inter"
 )
 
 // DelEvent deletes event.

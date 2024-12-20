@@ -6,7 +6,7 @@ import (
 	"github.com/Fantom-foundation/lachesis-base/hash"
 	"github.com/ethereum/go-ethereum/log"
 
-	"github.com/Fantom-foundation/go-opera/utils"
+	"github.com/WlinkNET/xpense_chain/utils"
 )
 
 var openPrevActionFile = utils.OpenFile

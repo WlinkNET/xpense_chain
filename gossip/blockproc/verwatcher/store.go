@@ -5,7 +5,7 @@ import (
 
 	"github.com/Fantom-foundation/lachesis-base/kvdb"
 
-	"github.com/Fantom-foundation/go-opera/logger"
+	"github.com/WlinkNET/xpense_chain/logger"
 )
 
 // Store is a node persistent storage working over physical key-value database.

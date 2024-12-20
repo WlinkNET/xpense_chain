@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
-	"github.com/Fantom-foundation/go-opera/opera"
+	"github.com/WlinkNET/xpense_chain/evmcore"
+	"github.com/WlinkNET/xpense_chain/opera"
 )
 
 func TestBaseFee_ExamplePriceAdjustments(t *testing.T) {

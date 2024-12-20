@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
-	"github.com/Fantom-foundation/go-opera/gossip"
+	"github.com/WlinkNET/xpense_chain/evmcore"
+	"github.com/WlinkNET/xpense_chain/gossip"
 	"github.com/Fantom-foundation/lachesis-base/utils/cachescale"
 	pcsclite "github.com/gballet/go-libpcsclite"
 	"gopkg.in/urfave/cli.v1"

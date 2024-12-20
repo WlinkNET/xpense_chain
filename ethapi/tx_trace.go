@@ -17,11 +17,11 @@ import (
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
-	"github.com/Fantom-foundation/go-opera/inter/state"
-	"github.com/Fantom-foundation/go-opera/opera"
-	"github.com/Fantom-foundation/go-opera/txtrace"
-	"github.com/Fantom-foundation/go-opera/utils/signers/gsignercache"
+	"github.com/WlinkNET/xpense_chain/evmcore"
+	"github.com/WlinkNET/xpense_chain/inter/state"
+	"github.com/WlinkNET/xpense_chain/opera"
+	"github.com/WlinkNET/xpense_chain/txtrace"
+	"github.com/WlinkNET/xpense_chain/utils/signers/gsignercache"
 )
 
 const (

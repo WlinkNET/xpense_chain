@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/Fantom-foundation/go-opera/tests/contracts/contractcreator"
+	"github.com/WlinkNET/xpense_chain/tests/contracts/contractcreator"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/stretchr/testify/require"

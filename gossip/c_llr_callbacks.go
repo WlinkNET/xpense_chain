@@ -11,12 +11,12 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/params"
 
-	"github.com/Fantom-foundation/go-opera/gossip/evmstore"
-	"github.com/Fantom-foundation/go-opera/inter"
-	"github.com/Fantom-foundation/go-opera/inter/iblockproc"
-	"github.com/Fantom-foundation/go-opera/inter/ibr"
-	"github.com/Fantom-foundation/go-opera/inter/ier"
-	"github.com/Fantom-foundation/go-opera/opera"
+	"github.com/WlinkNET/xpense_chain/gossip/evmstore"
+	"github.com/WlinkNET/xpense_chain/inter"
+	"github.com/WlinkNET/xpense_chain/inter/iblockproc"
+	"github.com/WlinkNET/xpense_chain/inter/ibr"
+	"github.com/WlinkNET/xpense_chain/inter/ier"
+	"github.com/WlinkNET/xpense_chain/opera"
 )
 
 // defaultBlobGasPrice Sonic does not support blobs, so this price is constant

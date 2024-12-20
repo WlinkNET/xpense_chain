@@ -10,8 +10,8 @@ import (
 	"github.com/Fantom-foundation/lachesis-base/lachesis"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"github.com/Fantom-foundation/go-opera/inter"
-	"github.com/Fantom-foundation/go-opera/opera"
+	"github.com/WlinkNET/xpense_chain/inter"
+	"github.com/WlinkNET/xpense_chain/opera"
 )
 
 type ValidatorBlockState struct {

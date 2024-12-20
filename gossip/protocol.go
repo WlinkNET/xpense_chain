@@ -9,9 +9,9 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	notify "github.com/ethereum/go-ethereum/event"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
-	"github.com/Fantom-foundation/go-opera/gossip/emitter"
-	"github.com/Fantom-foundation/go-opera/inter"
+	"github.com/WlinkNET/xpense_chain/evmcore"
+	"github.com/WlinkNET/xpense_chain/gossip/emitter"
+	"github.com/WlinkNET/xpense_chain/inter"
 )
 
 // Constants to match up protocol versions and messages

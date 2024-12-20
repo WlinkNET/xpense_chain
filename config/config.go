@@ -11,9 +11,9 @@ import (
 	"strings"
 
 	carmen "github.com/Fantom-foundation/Carmen/go/state"
-	"github.com/Fantom-foundation/go-opera/config/flags"
-	"github.com/Fantom-foundation/go-opera/gossip/evmstore"
-	"github.com/Fantom-foundation/go-opera/version"
+	"github.com/WlinkNET/xpense_chain/config/flags"
+	"github.com/WlinkNET/xpense_chain/gossip/evmstore"
+	"github.com/WlinkNET/xpense_chain/version"
 	"github.com/ethereum/go-ethereum/common/fdlimit"
 
 	"github.com/Fantom-foundation/lachesis-base/abft"
@@ -26,12 +26,12 @@ import (
 	"github.com/syndtr/goleveldb/leveldb/opt"
 	"gopkg.in/urfave/cli.v1"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
-	"github.com/Fantom-foundation/go-opera/gossip"
-	"github.com/Fantom-foundation/go-opera/gossip/emitter"
-	"github.com/Fantom-foundation/go-opera/integration"
-	"github.com/Fantom-foundation/go-opera/utils/memory"
-	"github.com/Fantom-foundation/go-opera/vecmt"
+	"github.com/WlinkNET/xpense_chain/evmcore"
+	"github.com/WlinkNET/xpense_chain/gossip"
+	"github.com/WlinkNET/xpense_chain/gossip/emitter"
+	"github.com/WlinkNET/xpense_chain/integration"
+	"github.com/WlinkNET/xpense_chain/utils/memory"
+	"github.com/WlinkNET/xpense_chain/vecmt"
 )
 
 const (

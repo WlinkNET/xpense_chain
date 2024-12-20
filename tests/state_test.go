@@ -20,7 +20,7 @@ import (
 	"fmt"
 	carmen "github.com/Fantom-foundation/Carmen/go/state"
 	"github.com/Fantom-foundation/Carmen/go/state/gostate"
-	"github.com/Fantom-foundation/go-opera/opera"
+	"github.com/WlinkNET/xpense_chain/opera"
 	"github.com/ethereum/go-ethereum/tests"
 	"os"
 	"path/filepath"

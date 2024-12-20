@@ -13,15 +13,15 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Fantom-foundation/go-opera/gossip/emitter/mock"
-	"github.com/Fantom-foundation/go-opera/integration/makefakegenesis"
-	"github.com/Fantom-foundation/go-opera/inter"
-	"github.com/Fantom-foundation/go-opera/opera"
-	"github.com/Fantom-foundation/go-opera/utils/txtime"
-	"github.com/Fantom-foundation/go-opera/vecmt"
+	"github.com/WlinkNET/xpense_chain/gossip/emitter/mock"
+	"github.com/WlinkNET/xpense_chain/integration/makefakegenesis"
+	"github.com/WlinkNET/xpense_chain/inter"
+	"github.com/WlinkNET/xpense_chain/opera"
+	"github.com/WlinkNET/xpense_chain/utils/txtime"
+	"github.com/WlinkNET/xpense_chain/vecmt"
 )
 
-//go:generate go run github.com/golang/mock/mockgen -package=mock -destination=mock/world.go github.com/Fantom-foundation/go-opera/gossip/emitter External,TxPool,TxSigner,Signer
+//go:generate go run github.com/golang/mock/mockgen -package=mock -destination=mock/world.go github.com/WlinkNET/xpense_chain/gossip/emitter External,TxPool,TxSigner,Signer
 
 func TestEmitter(t *testing.T) {
 	cfg := DefaultConfig()

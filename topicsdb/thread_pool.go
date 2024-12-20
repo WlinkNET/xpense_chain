@@ -8,7 +8,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 
-	"github.com/Fantom-foundation/go-opera/utils/dbutil/threads"
+	"github.com/WlinkNET/xpense_chain/utils/dbutil/threads"
 )
 
 // withThreadPool wraps the index and limits its threads in use

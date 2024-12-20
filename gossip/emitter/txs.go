@@ -11,11 +11,11 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/params"
 
-	"github.com/Fantom-foundation/go-opera/eventcheck/epochcheck"
-	"github.com/Fantom-foundation/go-opera/eventcheck/gaspowercheck"
-	"github.com/Fantom-foundation/go-opera/inter"
-	"github.com/Fantom-foundation/go-opera/utils"
-	"github.com/Fantom-foundation/go-opera/utils/txtime"
+	"github.com/WlinkNET/xpense_chain/eventcheck/epochcheck"
+	"github.com/WlinkNET/xpense_chain/eventcheck/gaspowercheck"
+	"github.com/WlinkNET/xpense_chain/inter"
+	"github.com/WlinkNET/xpense_chain/utils"
+	"github.com/WlinkNET/xpense_chain/utils/txtime"
 )
 
 const (

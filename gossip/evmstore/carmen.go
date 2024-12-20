@@ -5,7 +5,7 @@ import (
 	"github.com/Fantom-foundation/Carmen/go/common/amount"
 	"github.com/Fantom-foundation/Carmen/go/common/witness"
 	carmen "github.com/Fantom-foundation/Carmen/go/state"
-	"github.com/Fantom-foundation/go-opera/inter/state"
+	"github.com/WlinkNET/xpense_chain/inter/state"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/stateless"
 	"github.com/ethereum/go-ethereum/core/tracing"

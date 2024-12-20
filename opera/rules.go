@@ -12,8 +12,8 @@ import (
 
 	"github.com/Fantom-foundation/Tosca/go/geth_adapter"
 	"github.com/Fantom-foundation/Tosca/go/interpreter/lfvm"
-	"github.com/Fantom-foundation/go-opera/inter"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/evmwriter"
+	"github.com/WlinkNET/xpense_chain/inter"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/evmwriter"
 )
 
 const (

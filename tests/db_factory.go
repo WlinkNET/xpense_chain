@@ -2,7 +2,7 @@ package tests
 
 import (
 	carmen "github.com/Fantom-foundation/Carmen/go/state"
-	"github.com/Fantom-foundation/go-opera/gossip/evmstore"
+	"github.com/WlinkNET/xpense_chain/gossip/evmstore"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/state"
 	"github.com/ethereum/go-ethereum/core/tracing"

@@ -1,7 +1,7 @@
 package evmstore
 
 import (
-	"github.com/Fantom-foundation/go-opera/inter/state"
+	"github.com/WlinkNET/xpense_chain/inter/state"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/tracing"
 	"github.com/ethereum/go-ethereum/core/types"

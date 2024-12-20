@@ -9,10 +9,10 @@ import (
 	"github.com/ethereum/go-ethereum/p2p/enode"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
-	"github.com/Fantom-foundation/go-opera/gossip"
-	"github.com/Fantom-foundation/go-opera/gossip/emitter"
-	"github.com/Fantom-foundation/go-opera/vecmt"
+	"github.com/WlinkNET/xpense_chain/evmcore"
+	"github.com/WlinkNET/xpense_chain/gossip"
+	"github.com/WlinkNET/xpense_chain/gossip/emitter"
+	"github.com/WlinkNET/xpense_chain/vecmt"
 )
 
 func TestConfigFile(t *testing.T) {

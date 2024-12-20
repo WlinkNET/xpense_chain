@@ -12,8 +12,8 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/Fantom-foundation/go-opera/eventcheck/basiccheck"
-	"github.com/Fantom-foundation/go-opera/inter"
+	"github.com/WlinkNET/xpense_chain/eventcheck/basiccheck"
+	"github.com/WlinkNET/xpense_chain/inter"
 )
 
 type LLRBasicCheckTestSuite struct {

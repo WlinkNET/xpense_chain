@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
+	"github.com/WlinkNET/xpense_chain/evmcore"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"

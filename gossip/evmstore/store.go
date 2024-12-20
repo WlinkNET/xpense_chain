@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 
 	carmen "github.com/Fantom-foundation/Carmen/go/state"
-	"github.com/Fantom-foundation/go-opera/logger"
-	"github.com/Fantom-foundation/go-opera/topicsdb"
-	"github.com/Fantom-foundation/go-opera/utils/rlpstore"
+	"github.com/WlinkNET/xpense_chain/logger"
+	"github.com/WlinkNET/xpense_chain/topicsdb"
+	"github.com/WlinkNET/xpense_chain/utils/rlpstore"
 	"github.com/Fantom-foundation/lachesis-base/kvdb"
 	"github.com/Fantom-foundation/lachesis-base/kvdb/table"
 	"github.com/Fantom-foundation/lachesis-base/utils/wlru"

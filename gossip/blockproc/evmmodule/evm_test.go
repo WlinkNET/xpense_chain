@@ -4,9 +4,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/Fantom-foundation/go-opera/inter/iblockproc"
-	"github.com/Fantom-foundation/go-opera/inter/state"
-	"github.com/Fantom-foundation/go-opera/opera"
+	"github.com/WlinkNET/xpense_chain/inter/iblockproc"
+	"github.com/WlinkNET/xpense_chain/inter/state"
+	"github.com/WlinkNET/xpense_chain/opera"
 	"github.com/ethereum/go-ethereum/common"
 	tracing "github.com/ethereum/go-ethereum/core/tracing"
 	"github.com/ethereum/go-ethereum/core/types"

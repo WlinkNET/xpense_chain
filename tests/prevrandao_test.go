@@ -2,7 +2,7 @@ package tests
 
 import (
 	"context"
-	"github.com/Fantom-foundation/go-opera/tests/contracts/prevrandao"
+	"github.com/WlinkNET/xpense_chain/tests/contracts/prevrandao"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"math/big"
 	"testing"

@@ -1,5 +1,5 @@
 {
-  "_": "This is a sample JSON genesis file. Use 'sonictool genesis json example-genesis.json' to generate a database from it.",
+  "_": "This is a sample JSON genesis file. Use 'xpensetool genesis json example-genesis.json' to generate a database from it.",
   "rules": {
     "Name": "sample-demonet",
     "NetworkID": 4003,

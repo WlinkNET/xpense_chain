@@ -3,7 +3,7 @@ package emitter
 import (
 	"time"
 
-	"github.com/Fantom-foundation/go-opera/utils/txtime"
+	"github.com/WlinkNET/xpense_chain/utils/txtime"
 
 	"github.com/Fantom-foundation/lachesis-base/emitter/ancestor"
 	"github.com/Fantom-foundation/lachesis-base/inter/idx"
@@ -11,10 +11,10 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 
-	"github.com/Fantom-foundation/go-opera/inter"
-	"github.com/Fantom-foundation/go-opera/opera/contracts/emitterdriver"
-	"github.com/Fantom-foundation/go-opera/utils"
-	"github.com/Fantom-foundation/go-opera/utils/adapters/vecmt2dagidx"
+	"github.com/WlinkNET/xpense_chain/inter"
+	"github.com/WlinkNET/xpense_chain/opera/contracts/emitterdriver"
+	"github.com/WlinkNET/xpense_chain/utils"
+	"github.com/WlinkNET/xpense_chain/utils/adapters/vecmt2dagidx"
 )
 
 // OnNewEpoch should be called after each epoch change, and on startup

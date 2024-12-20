@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/Fantom-foundation/go-opera/tests/contracts/counter"
+	"github.com/WlinkNET/xpense_chain/tests/contracts/counter"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 )

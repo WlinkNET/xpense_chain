@@ -9,8 +9,8 @@ import (
 	"github.com/holiman/uint256"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Fantom-foundation/go-opera/logger"
-	"github.com/Fantom-foundation/go-opera/utils"
+	"github.com/WlinkNET/xpense_chain/logger"
+	"github.com/WlinkNET/xpense_chain/utils"
 )
 
 func TestConsensusCallback(t *testing.T) {

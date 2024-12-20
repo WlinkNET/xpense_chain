@@ -1,15 +1,15 @@
 package config
 
 import (
-	"github.com/Fantom-foundation/go-opera/config/flags"
+	"github.com/WlinkNET/xpense_chain/config/flags"
 	"github.com/pkg/errors"
 	cli "gopkg.in/urfave/cli.v1"
 
 	"github.com/Fantom-foundation/lachesis-base/inter/idx"
 
-	"github.com/Fantom-foundation/go-opera/gossip/emitter"
-	"github.com/Fantom-foundation/go-opera/integration/makefakegenesis"
-	"github.com/Fantom-foundation/go-opera/inter/validatorpk"
+	"github.com/WlinkNET/xpense_chain/gossip/emitter"
+	"github.com/WlinkNET/xpense_chain/integration/makefakegenesis"
+	"github.com/WlinkNET/xpense_chain/inter/validatorpk"
 )
 
 

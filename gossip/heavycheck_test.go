@@ -10,9 +10,9 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/Fantom-foundation/go-opera/eventcheck/epochcheck"
-	"github.com/Fantom-foundation/go-opera/eventcheck/heavycheck"
-	"github.com/Fantom-foundation/go-opera/inter"
+	"github.com/WlinkNET/xpense_chain/eventcheck/epochcheck"
+	"github.com/WlinkNET/xpense_chain/eventcheck/heavycheck"
+	"github.com/WlinkNET/xpense_chain/inter"
 )
 
 type LLRHeavyCheckTestSuite struct {

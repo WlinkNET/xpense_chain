@@ -3,8 +3,8 @@ package genesisstore
 import (
 	"io"
 
-	"github.com/Fantom-foundation/go-opera/logger"
-	"github.com/Fantom-foundation/go-opera/opera/genesis"
+	"github.com/WlinkNET/xpense_chain/logger"
+	"github.com/WlinkNET/xpense_chain/opera/genesis"
 )
 
 func BlocksSection(i int) string {

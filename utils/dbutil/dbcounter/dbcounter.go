@@ -2,7 +2,7 @@ package dbcounter
 
 import (
 	"fmt"
-	"github.com/Fantom-foundation/go-opera/utils/dbutil"
+	"github.com/WlinkNET/xpense_chain/utils/dbutil"
 	"sync/atomic"
 
 	"github.com/Fantom-foundation/lachesis-base/kvdb"

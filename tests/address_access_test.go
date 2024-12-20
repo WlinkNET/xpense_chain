@@ -4,7 +4,7 @@ import (
 	"math/big"
 	"testing"
 
-	accessCost "github.com/Fantom-foundation/go-opera/tests/contracts/access_cost"
+	accessCost "github.com/WlinkNET/xpense_chain/tests/contracts/access_cost"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"

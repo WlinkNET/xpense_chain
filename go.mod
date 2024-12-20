@@ -1,4 +1,4 @@
-module github.com/Fantom-foundation/go-opera
+module github.com/WlinkNET/xpense_chain
 
 go 1.22.0
 

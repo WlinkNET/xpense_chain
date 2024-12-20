@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/Fantom-foundation/go-opera/evmcore"
+	"github.com/WlinkNET/xpense_chain/evmcore"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/core/vm"
