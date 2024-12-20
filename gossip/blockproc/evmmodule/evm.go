@@ -83,18 +83,18 @@ func (p *OperaEVMProcessor) evmBlockWith(txs types.Transactions) *evmcore.EvmBlo
 	baseFee := p.net.Economy.MinGasPrice
 	if !p.net.Upgrades.London {
 		baseFee = nil
-	} else if p.net.Upgrades.Sonic {
+	} else if p.net.Upgrades.Xpense {
 		baseFee = p.gasBaseFee
 	}
 
 	prevRandao := common.Hash{}
 	// This condition must be kept, otherwise Opera will not be able to synchronize
-	if p.net.Upgrades.Sonic {
+	if p.net.Upgrades.Xpense {
 		prevRandao = p.prevRandao
 	}
 
 	var withdrawalsHash *common.Hash = nil
-	if p.net.Upgrades.Sonic {
+	if p.net.Upgrades.Xpense {
 		withdrawalsHash = &types.EmptyWithdrawalsHash
 	}
 

@@ -662,7 +662,7 @@ func (pool *TxPool) validateTx(tx *types.Transaction, local bool) error {
 		if !pool.eip4844 {
 			return ErrTxTypeNotSupported
 		}
-		// For now, Sonic only supports Blob transactions without blob data.
+		// For now, Xpense only supports Blob transactions without blob data.
 		if len(tx.BlobHashes()) > 0 ||
 			(tx.BlobTxSidecar() != nil && len(tx.BlobTxSidecar().BlobHashes()) > 0) {
 			return ErrTxTypeNotSupported

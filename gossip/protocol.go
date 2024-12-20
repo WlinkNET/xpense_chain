@@ -16,9 +16,9 @@ import (
 
 // Constants to match up protocol versions and messages
 const (
-	_FTM62    = 62
-	_Sonic_64 = 64
-	_Sonic_65 = 65
+	_FTM62     = 62
+	_Xpense_64 = 64
+	_Xpense_65 = 65
 )
 
 // ProtocolName is the official short name of the protocol used during capability negotiation.
@@ -26,16 +26,16 @@ const ProtocolName = "opera"
 
 // ProtocolVersions are the supported versions of the protocol (first is primary).
 var ProtocolVersions = []uint{
-	_Sonic_65,
-	_Sonic_64,
+	_Xpense_65,
+	_Xpense_64,
 	_FTM62,
 }
 
 // protocolLengths are the number of implemented message corresponding to different protocol versions.
 var protocolLengths = map[uint]uint64{
-	_Sonic_65: EndPointUpdateMsg + 1,
-	_Sonic_64: PeerInfosMsg + 1,
-	_FTM62:    EventsStreamResponse + 1,
+	_Xpense_65: EndPointUpdateMsg + 1,
+	_Xpense_64: PeerInfosMsg + 1,
+	_FTM62:     EventsStreamResponse + 1,
 }
 
 const protocolMaxMsgSize = inter.ProtocolMaxMsgSize // Maximum cap on the size of a protocol message

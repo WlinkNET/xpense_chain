@@ -30,6 +30,7 @@ import (
 	"github.com/WlinkNET/xpense_chain/gossip/gasprice/gaspricelimits"
 	bip39 "github.com/tyler-smith/go-bip39"
 
+	"github.com/Fantom-foundation/lachesis-base/inter/idx"
 	"github.com/WlinkNET/xpense_chain/evmcore"
 	"github.com/WlinkNET/xpense_chain/gossip/gasprice"
 	"github.com/WlinkNET/xpense_chain/inter/state"
@@ -37,7 +38,6 @@ import (
 	"github.com/WlinkNET/xpense_chain/utils"
 	"github.com/WlinkNET/xpense_chain/utils/signers/gsignercache"
 	"github.com/WlinkNET/xpense_chain/utils/signers/internaltx"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/accounts/abi"
@@ -84,7 +84,7 @@ func NewPublicEthereumAPI(b Backend) *PublicEthereumAPI {
 // GasPrice returns a suggestion for a gas price for legacy transactions.
 func (s *PublicEthereumAPI) GasPrice(ctx context.Context) (*hexutil.Big, error) {
 	// Right now, we are not suggesting any tips since those have no real
-	// effect on the Sonic network. So the suggested gas price is a slightly
+	// effect on the Xpense network. So the suggested gas price is a slightly
 	// increased base fee to provide a buffer for short-term price fluctuations.
 	price := s.b.CurrentBlock().Header().BaseFee
 	price = gaspricelimits.GetSuggestedGasPriceForNewTransactions(price)
@@ -1308,7 +1308,7 @@ func newRPCTransaction(tx *types.Transaction, blockHash common.Hash, blockNumber
 		copyAccessList(tx, result)
 		copyDynamicPricingFields(tx, result)
 	case types.BlobTxType:
-		// BLOB NOTE: the current sonic network supports blobTx so long as they don not contain blobs
+		// BLOB NOTE: the current Xpense network supports blobTx so long as they don not contain blobs
 		// for this reason they are equivalent to the dynamic fee tx type
 		copyAccessList(tx, result)
 		copyDynamicPricingFields(tx, result)

@@ -4,13 +4,14 @@ import (
 	"cmp"
 	"errors"
 	"fmt"
-	"github.com/WlinkNET/xpense_chain/gossip/emitter/mock"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/golang/mock/gomock"
 	"math/big"
 	"math/rand/v2"
 	"slices"
 	"testing"
+
+	"github.com/WlinkNET/xpense_chain/gossip/emitter/mock"
+	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/golang/mock/gomock"
 
 	"github.com/ethereum/go-ethereum/common"
 )
@@ -606,20 +607,20 @@ func TestTxScrambler_FilterAndOrderTransactions_RandomInput(t *testing.T) {
 	}
 }
 
-func TestGetExecutionOrder_ScramblerIsUsedOnlyForSonic(t *testing.T) {
+func TestGetExecutionOrder_ScramblerIsUsedOnlyForXpense(t *testing.T) {
 	tests := []struct {
 		name        string
-		isSonic     bool
+		isXpense    bool
 		expectedLen int
 	}{
 		{
-			name:        "SonicIsDisabled-InputStaysUnchanged",
-			isSonic:     false,
+			name:        "XpenseIsDisabled-InputStaysUnchanged",
+			isXpense:    false,
 			expectedLen: 4,
 		},
 		{
-			name:        "SonicIsEnabled-InputIsChanged",
-			isSonic:     true,
+			name:        "XpenseIsEnabled-InputIsChanged",
+			isXpense:    true,
 			expectedLen: 3,
 		},
 	}
@@ -645,7 +646,7 @@ func TestGetExecutionOrder_ScramblerIsUsedOnlyForSonic(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	signer := mock.NewMockTxSigner(ctrl)
 
-	// Only one loop is expected because the scrambler is disabled if Sonic is not enabled.
+	// Only one loop is expected because the scrambler is disabled if Xpense is not enabled.
 	gomock.InOrder(
 		signer.EXPECT().Sender(input[0]).Return(common.Address{1}, nil),
 		signer.EXPECT().Sender(input[1]).Return(common.Address{2}, nil),
@@ -655,7 +656,7 @@ func TestGetExecutionOrder_ScramblerIsUsedOnlyForSonic(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			txs := getExecutionOrder(input, signer, test.isSonic)
+			txs := getExecutionOrder(input, signer, test.isXpense)
 			// one transaction is removed from the list
 			if got, want := len(txs), test.expectedLen; got != want {
 				t.Errorf("unexpected number of transasctions, got: %d, want: %d", got, want)

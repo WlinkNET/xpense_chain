@@ -27,9 +27,9 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/trie"
 
+	"github.com/Fantom-foundation/lachesis-base/inter/idx"
 	"github.com/WlinkNET/xpense_chain/inter"
 	"github.com/WlinkNET/xpense_chain/opera"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
 )
 
 type (
@@ -83,17 +83,17 @@ func ToEvmHeader(block *inter.Block, prevHash common.Hash, rules opera.Rules) *E
 	baseFee := rules.Economy.MinGasPrice
 	if !rules.Upgrades.London {
 		baseFee = nil
-	} else if rules.Upgrades.Sonic {
+	} else if rules.Upgrades.Xpense {
 		baseFee = block.BaseFee
 	}
 
 	prevRandao := common.Hash{}
-	if rules.Upgrades.Sonic {
+	if rules.Upgrades.Xpense {
 		prevRandao = block.PrevRandao
 	}
 
 	var withdrawalsHash *common.Hash = nil
-	if rules.Upgrades.Sonic {
+	if rules.Upgrades.Xpense {
 		withdrawalsHash = &types.EmptyWithdrawalsHash
 	}
 

@@ -12,6 +12,12 @@ import (
 	"github.com/ethereum/go-ethereum/metrics"
 	"github.com/ethereum/go-ethereum/p2p/enode"
 
+	"github.com/Fantom-foundation/lachesis-base/gossip/dagprocessor"
+	"github.com/Fantom-foundation/lachesis-base/gossip/itemsfetcher"
+	"github.com/Fantom-foundation/lachesis-base/hash"
+	"github.com/Fantom-foundation/lachesis-base/inter/dag"
+	"github.com/Fantom-foundation/lachesis-base/inter/idx"
+	"github.com/Fantom-foundation/lachesis-base/utils/datasemaphore"
 	"github.com/WlinkNET/xpense_chain/eventcheck"
 	"github.com/WlinkNET/xpense_chain/eventcheck/epochcheck"
 	"github.com/WlinkNET/xpense_chain/eventcheck/heavycheck"
@@ -24,12 +30,6 @@ import (
 	"github.com/WlinkNET/xpense_chain/inter"
 	"github.com/WlinkNET/xpense_chain/logger"
 	"github.com/WlinkNET/xpense_chain/utils/txtime"
-	"github.com/Fantom-foundation/lachesis-base/gossip/dagprocessor"
-	"github.com/Fantom-foundation/lachesis-base/gossip/itemsfetcher"
-	"github.com/Fantom-foundation/lachesis-base/hash"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/utils/datasemaphore"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 	notify "github.com/ethereum/go-ethereum/event"
@@ -490,7 +490,7 @@ func (h *handler) highestPeerProgress() PeerProgress {
 func isUseless(node *enode.Node, name string) bool {
 	useless := discfilter.Banned(node.ID(), node.Record())
 	lowerName := strings.ToLower(name)
-	if !useless && !strings.Contains(lowerName, "opera") && !strings.Contains(lowerName, "sonic") {
+	if !useless && !strings.Contains(lowerName, "opera") && !strings.Contains(lowerName, "xpense") {
 		useless = true
 		discfilter.Ban(node.ID())
 	}

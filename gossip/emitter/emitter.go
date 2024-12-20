@@ -11,13 +11,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/WlinkNET/xpense_chain/utils"
-	"github.com/WlinkNET/xpense_chain/utils/txtime"
 	"github.com/Fantom-foundation/lachesis-base/emitter/ancestor"
 	"github.com/Fantom-foundation/lachesis-base/hash"
 	"github.com/Fantom-foundation/lachesis-base/inter/idx"
 	"github.com/Fantom-foundation/lachesis-base/inter/pos"
 	"github.com/Fantom-foundation/lachesis-base/utils/piecefunc"
+	"github.com/WlinkNET/xpense_chain/utils"
+	"github.com/WlinkNET/xpense_chain/utils/txtime"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/txpool"
 	"github.com/ethereum/go-ethereum/metrics"
@@ -399,7 +399,7 @@ func (em *Emitter) createEvent(sortedTxs *transactionsByPriceAndNonce) (*inter.E
 	}
 
 	version := uint8(0)
-	if em.world.GetRules().Upgrades.Sonic {
+	if em.world.GetRules().Upgrades.Xpense {
 		version = 2
 	} else if em.world.GetRules().Upgrades.Llr {
 		version = 1

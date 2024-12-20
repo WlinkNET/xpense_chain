@@ -13,7 +13,7 @@ import (
 func Run() error {
 	app := cli.NewApp()
 	app.Name = "xpensetool"
-	app.Usage = "the Sonic management tool"
+	app.Usage = "the Xpense management tool"
 	app.Version = version.VersionWithCommit(config.GitCommit, config.GitDate)
 	app.Flags = []cli.Flag{
 		flags.DataDirFlag,
@@ -152,10 +152,10 @@ The archive state is used for RPC - allows to handle state-related RPC queries.
 				ExecFlag,
 			},
 			Description: `
-The Sonic console is an interactive shell for the JavaScript runtime environment
+The Xpense console is an interactive shell for the JavaScript runtime environment
 which exposes a node admin interface as well as the Dapp JavaScript API.
 See https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console.
-This command allows to open a console attached to a running Sonic node.`,
+This command allows to open a console attached to a running Xpense node.`,
 		},
 
 		{
@@ -327,7 +327,7 @@ For non-interactive use the passphrase can be specified with the --password flag
     xpensetool account import --password=file <keyfile>
 
 Note:
-As you can directly copy your encrypted accounts to another Sonic instance,
+As you can directly copy your encrypted accounts to another Xpense instance,
 this import mechanism is not needed when you transfer an account between
 nodes.
 `,

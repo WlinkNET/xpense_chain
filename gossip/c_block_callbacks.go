@@ -271,7 +271,7 @@ func consensusCallbackBeginBlockFn(
 					}
 
 					signer := gsignercache.Wrap(types.MakeSigner(chainCfg, new(big.Int).SetUint64(number), uint64(blockCtx.Time)))
-					orderedTxs := getExecutionOrder(unorderedTxs, signer, es.Rules.Upgrades.Sonic)
+					orderedTxs := getExecutionOrder(unorderedTxs, signer, es.Rules.Upgrades.Xpense)
 
 					for i, receipt := range evmProcessor.Execute(orderedTxs) {
 						if receipt != nil { // < nil if skipped

@@ -19,7 +19,7 @@ import (
 	"github.com/WlinkNET/xpense_chain/opera"
 )
 
-// defaultBlobGasPrice Sonic does not support blobs, so this price is constant
+// defaultBlobGasPrice Xpense does not support blobs, so this price is constant
 var defaultBlobGasPrice = big.NewInt(1) // TODO issue #147
 
 func indexRawReceipts(s *Store, receiptsForStorage []*types.ReceiptForStorage, txs types.Transactions, blockIdx idx.Block, blockHash common.Hash, config *params.ChainConfig, time uint64, baseFee *big.Int, blobGasPrice *big.Int) (types.Receipts, error) {

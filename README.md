@@ -1,10 +1,10 @@
-# Sonic 
+# Xpense 
 
 EVM-compatible chain secured by the Lachesis consensus algorithm.
 
 ## Building the source
 
-Building Sonic requires both a Go (version 1.21 or later) and a C compiler. You can install
+Building Xpense requires both a Go (version 1.21 or later) and a C compiler. You can install
 them using your favourite package manager. Once the dependencies are installed, run:
 
 ```shell
@@ -12,7 +12,7 @@ make all
 ```
 The build output are ```build/xpensed``` and ```build/xpensetool``` executables.
 
-## Initialization of the Sonic Database
+## Initialization of the Xpense Database
 
 You will need a genesis file to join a network. Please check the following
 site for details how to get one: https://github.com/Fantom-foundation/lachesis_launch

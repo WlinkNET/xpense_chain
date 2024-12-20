@@ -89,7 +89,7 @@ func CheckTxs(txs types.Transactions, rules opera.Rules) error {
 	if rules.Upgrades.London {
 		maxType = 2
 	}
-	if rules.Upgrades.Sonic {
+	if rules.Upgrades.Xpense {
 		maxType = 3
 	}
 	for _, tx := range txs {
@@ -124,7 +124,7 @@ func (v *Checker) Validate(e inter.EventPayloadI) error {
 	}
 
 	version := uint8(0)
-	if rules.Upgrades.Sonic {
+	if rules.Upgrades.Xpense {
 		version = 2
 	} else if rules.Upgrades.Llr {
 		version = 1

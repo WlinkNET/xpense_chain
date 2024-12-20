@@ -1,8 +1,9 @@
 package config
 
+// TODO need changes
 var (
 	Bootnodes = map[string][]string{
-		"sonic": {
+		"xpense": {
 			"enode://5facb14cfb4c5cb63f916f46e9689619f65040aa8efb7e9e9adb506db9fc006f042828ad7896467cf5eb1f3b74e53ad4fcd6bc4f15ae3acc3e8b7628e5446dad@boot-a.sonic.soniclabs.com:5050",
 			"enode://04d51b2e172ed3722267bf26a39b55645ea220df7d35be7581a96409567cab5807eadd4c0b94f2c0c7128adece5ae64dd808dd9aa4543aa05c789bca02099731@boot-b.sonic.soniclabs.com:5050",
 			"enode://ae3a88445aafb8cfff48bbcb1e7399c49d5d00d7c859f6dc0d3f8f2386019481f49cf1c32f2bce5a234de1311ebd8162858a4aa4c9dcc7f99b9b0c770044e7d5@boot-c.sonic.soniclabs.com:5050",

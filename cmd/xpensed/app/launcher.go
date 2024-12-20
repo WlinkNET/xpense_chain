@@ -172,7 +172,7 @@ func initApp() {
 
 	app = cli.NewApp()
 	app.Name = "xpensed"
-	app.Usage = "the Sonic network client"
+	app.Usage = "the Xpense network client"
 	app.Version = version.VersionWithCommit(config.GitCommit, config.GitDate)
 	app.Action = lachesisMain
 	app.HideVersion = true // we have a command to print the version

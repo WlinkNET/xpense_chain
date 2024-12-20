@@ -36,7 +36,7 @@ import (
 
 const (
 	// ClientIdentifier to advertise over the network.
-	ClientIdentifier = "Sonic"
+	ClientIdentifier = "Xpense"
 )
 
 var (
@@ -354,6 +354,6 @@ func DefaultNodeConfig() node.Config {
 	cfg.Version = version.VersionWithCommit(GitCommit, GitDate)
 	cfg.HTTPModules = append(cfg.HTTPModules, "eth", "ftm", "dag", "abft", "web3")
 	cfg.WSModules = append(cfg.WSModules, "eth", "ftm", "dag", "abft", "web3")
-	cfg.IPCPath = "sonic.ipc"
+	cfg.IPCPath = "Xpense.ipc"
 	return cfg
 }

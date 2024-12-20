@@ -67,7 +67,7 @@ func (b *Block) GetEthereumHeader() *types.Header {
 	return &types.Header{
 		ParentHash:  b.ParentHash,
 		UncleHash:   types.EmptyUncleHash,
-		Coinbase:    common.Address{}, // < in Sonic, the coinbase is always 0
+		Coinbase:    common.Address{}, // < in Xpense, the coinbase is always 0
 		Root:        b.StateRoot,
 		TxHash:      b.TransactionsHashRoot,
 		ReceiptHash: b.ReceiptsHashRoot,
@@ -85,17 +85,17 @@ func (b *Block) GetEthereumHeader() *types.Header {
 		Nonce:     types.BlockNonce{}, // constant 0 in Ethereum
 		BaseFee:   b.BaseFee,
 
-		// Sonic does not have a beacon chain and no withdrawals.
+		// Xpense does not have a beacon chain and no withdrawals.
 		WithdrawalsHash: &types.EmptyWithdrawalsHash,
 
-		// Sonic does not support blobs, so no blob gas is used and there is
+		// Xpense does not support blobs, so no blob gas is used and there is
 		// no excess blob gas.
 		BlobGasUsed:   new(uint64), // = 0
 		ExcessBlobGas: new(uint64), // = 0
 	}
 }
 
-// EncodeExtraData produces the ExtraData field encoding Sonic-specific data
+// EncodeExtraData produces the ExtraData field encoding Xpense-specific data
 // in the Ethereum block header. This data includes:
 //   - the nano-second part of the block's timestamp, for sub-second precision;
 //   - the duration of the block, in nanoseconds, defined as the time elapsed
@@ -111,7 +111,7 @@ func EncodeExtraData(time time.Time, duration time.Duration) []byte {
 	return extra
 }
 
-// DecodeExtraData decodes the ExtraData field encoding Sonic-specific data
+// DecodeExtraData decodes the ExtraData field encoding Xpense-specific data
 // in the Ethereum block header. See EncodeExtraData for details.
 func DecodeExtraData(extra []byte) (
 	nanos int,

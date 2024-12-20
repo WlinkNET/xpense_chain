@@ -24,7 +24,7 @@ const (
 	berlinBit              = 1 << 0
 	londonBit              = 1 << 1
 	llrBit                 = 1 << 2
-	sonicBit               = 1 << 3
+	xpenseBit              = 1 << 3
 
 	defaultMaxBlockGas          = 1_000_000_000
 	defaultTargetGasRate        = 15_000_000 // 15 MGas/s
@@ -52,7 +52,7 @@ var DefaultVMConfig = func() vm.Config {
 		Interpreter:           lfvmFactory,
 		InterpreterForTracing: gethFactory,
 
-		// Fantom/Sonic modifications
+		// Xpense modifications
 		ChargeExcessGas:                 true,
 		IgnoreGasFeeCap:                 true,
 		InsufficientBalanceIsNotAnError: true,
@@ -172,7 +172,7 @@ type EconomyRules struct {
 
 	// MinGasPrice defines a lower boundary for the gas price
 	// on the network. However, its interpretation is different
-	// in the context of the Fantom and Sonic networks.
+	// in the context of the Fantom and Xpense networks.
 	//
 	// On the Fantom network: MinGasPrice is the minimum gas price
 	// defining the base fee of a block. The MinGasPrice is set by
@@ -180,15 +180,15 @@ type EconomyRules struct {
 	// based on load observed during an epoch. Base fees charged
 	// on the network correspond exactly to the MinGasPrice.
 	//
-	// On the Sonic network: this parameter is ignored. Base fees
+	// On the Xpense network: this parameter is ignored. Base fees
 	// are controlled by the MinBaseFee parameter.
 	MinGasPrice *big.Int
 
 	// MinBaseFee is a lower bound for the base fee on the network.
-	// This option is only supported by the Sonic network. On the
+	// This option is only supported by the Xpense network. On the
 	// Fantom network it is ignored.
 	//
-	// On the Sonic network, base fees are automatically adjusted
+	// On the Xpense network, base fees are automatically adjusted
 	// after each block based on the observed gas consumption rate.
 	// The value set by this parameter is a lower bound for these
 	// adjustments. Base fees may never fall below this value.
@@ -211,7 +211,7 @@ type Upgrades struct {
 	Berlin bool
 	London bool
 	Llr    bool
-	Sonic  bool
+	Xpense bool
 }
 
 type UpgradeHeight struct {
@@ -275,11 +275,11 @@ func (r Rules) EvmChainConfig(hh []UpgradeHeight) *ethparams.ChainConfig {
 			cfg.LondonBlock = nil
 		}
 
-		if cfg.CancunTime == nil && h.Upgrades.Sonic {
+		if cfg.CancunTime == nil && h.Upgrades.Xpense {
 			cfg.ShanghaiTime = timestamp
 			cfg.CancunTime = timestamp
 		}
-		if !h.Upgrades.Sonic {
+		if !h.Upgrades.Xpense {
 			// disabling upgrade breaks the history replay - should be never used
 			cfg.ShanghaiTime = nil
 			cfg.CancunTime = nil
@@ -319,7 +319,7 @@ func FakeNetRules() Rules {
 			Berlin: true,
 			London: true,
 			Llr:    false,
-			Sonic:  true,
+			Xpense: true,
 		},
 	}
 }

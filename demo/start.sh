@@ -12,7 +12,7 @@ popd
 rm -f ./transactions.rlp
 for ((i=0;i<$N;i+=1))
 do
-    DATADIR="${PWD}/sonic$i.datadir"
+    DATADIR="${PWD}/xpense$i.datadir"
     PORT=$(($PORT_BASE+$i))
     RPCP=$(($RPCP_BASE+$i))
     WSP=$(($WSP_BASE+$i))
